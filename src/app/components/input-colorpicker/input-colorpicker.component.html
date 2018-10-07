@@ -1,0 +1,18 @@
+<h3 class="first">ColorPickerDemo</h3>
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-4">
+    <!--[inline]="true"-->
+    <p-colorPicker [(ngModel)]="color" [inline]="true"></p-colorPicker>
+    <p style="margin-top: .5em">selected color: <span style="display:inline-block;width:32px;height:32px;vertical-align:middle"
+        [style.backgroundColor]="color"> </span>{{color}} </p>
+  </div>
+
+  <div class="ui-g-12 ui-md-4">
+    <!--format="rgb" 则无法放入style中-->
+    <p-colorPicker [(ngModel)]="color2"></p-colorPicker>
+    <!--使用不同的方式进行配置style-->
+    <!--[ngStyle]="{'backgroundColor':color2}"-->
+    <!--[style.backgroundColor]="color2"-->
+    <p style="margin-top:.5em">Selected Color: <span [ngStyle]="{'color':color2}">{{color2}}</span></p>
+  </div>
+</div>

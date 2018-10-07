@@ -1,0 +1,45 @@
+<h2 class="first">日期控件设置</h2>
+<div class="ui-g ui-fluid">
+
+  <!--[readonlyInput]="true" 禁用手动输入-->
+  <!--[locale]="es"  设置本地化，es需要在js中初始化-->
+  <!--dateFormat="yy/mm/dd" 时间显示格式-->
+  <!--hourFormat="12" 可选值12、24-->
+  <!--[showIcon]="true" 显示日历图标-->
+  <!--[minDate]="value" [maxDate]="value" 设定范围value是Date类型的数据-->
+  <!--[showTime]="true" 显示时间-->
+  <!--[timeOnly]="true" 只显示时间-->
+  <!--selectionMode='' 选择模式，可选值为multiple、'range' 多选，时间段-->
+  <!--显示 showButtonBar 显示 Today, Clear的按钮-->
+  <!--[touchUI]="true" 触控的样式，用于移动端-->
+  <!--[inline]="true" 日期控件展开，不会缩回-->
+  <!--view=“month” 按月选择模式-->
+  <!--yearRange="2000:2030" 设置时间范围-->
+  <!--[numberOfMonths]="3" 设置多个日期控件，方便选取时间-->
+  <!--[yearNavigator]="true" 年份选择器-->
+  <!--[monthNavigator]="true" 月份选择器-->
+  <!--[disabledDates]="values" values是时间数组-->
+  <!--[disabledDays]="values" values是星期数组，比如[0,6]代表星期天和星期六-->
+  <div class="ui-g-12 ui-md-4">
+    <h3>Chinese</h3>
+    <p-calendar [(ngModel)]="date" [locale]="cn" dateFormat="yy/mm/dd" [showIcon]="true" [minDate]="minDate" [maxDate]="maxDate"
+      [readonlyInput]="true"></p-calendar>
+  </div>
+
+  <div class="ui-g-12 ui-md-4">
+    <h3>Disable Days</h3>
+    <p-calendar [(ngModel)]="date1" tabindex="0" [disabledDates]="invalidDates" [disabledDays]="[0,6]" [readonlyInput]="true"></p-calendar>
+  </div>
+
+
+  <!--针对日期设置不同的显示样式-->
+  <div class="ui-g-12 ui-md-4">
+    <h3>Date Template</h3>
+    <p-calendar [(ngModel)]="date2">
+      <ng-template pTemplate="date" let-date>
+        <span [ngStyle]="{backgroundColor: (date.day < 21 && date.day > 10) ? '#81C784' : 'inherit'}" style="border-radius:50%;padding: .25em;width: 1.75em; height:1.75em; display:block;">{{date.day}}</span>
+      </ng-template>
+    </p-calendar>
+  </div>
+
+</div>

@@ -1,0 +1,31 @@
+<h2 class="first">InputGroup</h2>
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-4">
+    <div class="ui-inputgroup">
+      <!--同一个ui-inputgroup中可以增加多个ui-inputgroup-addon-->
+      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+      <!--增加 pInputText, 即可引用 primeNG的 inputText-->
+      <input type="text" pInputText placeholder="Username">
+      <!--也可以在此处增加 ui-inputgroup-addon-->
+    </div>
+  </div>
+  <div class="ui-g-12 ui-md-4">
+    <div class="ui-inputgroup">
+      <button pButton type="button" label="Keyword"></button>
+      <input type="text" pInputText placeholder="Keyword">
+      <button pButton type="button" icon="fa fa-superpowers" class="ui-button-warn"></button>
+    </div>
+  </div>
+
+  <div class="ui-g-12 ui-md-4">
+    <div class="ui-inputgroup">
+      <span class="ui-inputgroup-addon">
+        <p-checkbox></p-checkbox>
+      </span>
+      <input type="text" pInputText placeholder="Username">
+      <span class="ui-inputgroup-addon">
+        <p-radioButton></p-radioButton>
+      </span>
+    </div>
+  </div>
+</div>

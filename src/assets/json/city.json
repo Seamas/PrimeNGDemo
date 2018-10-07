@@ -1,0 +1,15 @@
+{
+  "data": [{
+    "name": "Hangzhou",
+    "code": "hz"
+  }, {
+    "name": "Ningbo",
+    "code": "nb"
+  }, {
+    "name": "Wenzhou",
+    "code": "wz"
+  }, {
+    "name": "Jinhua",
+    "code": "jh"
+  }]
+}

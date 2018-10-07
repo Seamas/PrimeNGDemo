@@ -1,0 +1,16 @@
+<h3 class="first">CheckBoxDemo</h3>
+
+<div class="ui-g ui-fluid">
+  selected Countries: <span *ngFor="let country of selectedCountries" style="margin-right:10px">{{country}}</span>
+</div>
+
+
+<div class="ui-g ui-fluid">
+  <span>boolean {{checked}}</span>
+  <p-checkbox [(ngModel)]="checked" binary="true"></p-checkbox>
+</div>
+<div class="ui-g ui-fluid">
+  <div *ngFor="let country of countries" class="ui-g-12 ui-md-4">
+    <p-checkbox name="selected" value="{{country.name}}" label="{{country.name}}" [(ngModel)]="selectedCountries"></p-checkbox>
+  </div>
+</div>

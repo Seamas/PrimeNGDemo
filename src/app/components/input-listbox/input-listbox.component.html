@@ -1,0 +1,42 @@
+<h3>ListBoxDemo</h3>
+<div class="ui-g ui-fluid">
+  <!--[options]="value" 选项-->
+  <!--optionLabel="name" 如果选项是对象，则一般有此项作为显示内容-->
+  <!--multiple="multiple" 开启多选-->
+  <!--checkbox="checkbox" 开启勾选-->
+  <!--filter="filter" 开启过滤-->
+  <!--<p-header> 头部-->
+  <div class="ui-g-12 ui-md-4">
+    <h4>basic listbox</h4>
+    <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-listbox>
+    <p>Selected City: <span>{{selectedCity ? selectedCity.name : 'none'}}</span></p>
+  </div>
+
+  <div class="ui-g-12 ui-md-4">
+    <h4>advance listbox</h4>
+    <p-listbox [options]="cities" [(ngModel)]="selectedCities" multiple="multiple" checkbox="checkbox" filter="filter"
+      optionLabel="name">
+      <p-header>
+        <i class="fa fa-car"></i>
+      </p-header>
+    </p-listbox>
+    <p>selected cities: <span *ngFor="let city of selectedCities" style="margin-right: 10px">{{city.name}}</span></p>
+  </div>
+
+  <div class="ui-g-12 ui-md-4">
+    <h4>content</h4>
+    <p-listbox [options]="cars" [(ngModel)]="selectedCar" [listStyle]="{'max-height':'250px'}">
+      <ng-template let-car pTemplate="item">
+        <div class="ui-helper-clearfix">
+          <img src="assets/showcase/images/demo/car/{{car.label}}.png" style="display:inline-block;margin:5px 0 0 5px"
+            width="48">
+          <span style="float:right;margin:20px 10px 0 0">{{car.value}}</span>
+        </div>
+      </ng-template>
+      <p-footer>
+        Selected: {{selectedCar||'none'}}
+      </p-footer>
+    </p-listbox>
+    <button type="button" (click)="selectedCar=null" pButton icon="pi pi-times" label="Clear Selected Car"></button>
+  </div>
+</div>

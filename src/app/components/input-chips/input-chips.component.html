@@ -1,0 +1,16 @@
+<h3 class="first">InputChips Demo</h3>
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-4">
+    <p-chips [(ngModel)]="values"></p-chips>
+  </div>
+
+  <div class="ui-g-12 ui-md-4">
+    <p-chips [(ngModel)]="templates">
+      <ng-template let-item pTemplate="item">
+        {{item}} - (active)
+        <!--i用作占位符，以免删除按钮与内容重叠-->
+        <i class="fa fa-user" style="margin-right:2em"></i>
+      </ng-template>
+    </p-chips>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<h3 class="first">InputText Demo</h3>
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-4">
+    <h4>basic</h4>
+    <input pInputText [(ngModel)]="text" type="text">
+  </div>
+  <div class="ui-g-12 ui-md-4">
+    <h4>float label</h4>
+    <!--浮动的文本标签-->
+    <!--span class="ui-float-label"-->
+    <!--input id="xxx"-->
+    <!--label for="xxx"-->
+    <span class="ui-float-label">
+      <input id="float-input" pInputText type="text">
+      <label for="float-input">Username</label>
+    </span>
+  </div>
+  <div class="ui-g-12 ui-md-4">
+    <h4>disabled</h4>
+    <input pInputText type="text" [disabled]="disabled">
+    <button pButton (click)="toggleDisabled()" label="Toggle"></button>
+  </div>
+</div>

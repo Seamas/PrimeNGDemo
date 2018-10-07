@@ -1,0 +1,19 @@
+<h3>Rating Demo</h3>
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-4">
+    <!--[cancel]="true" 禁止取消-->
+    <!--stars="10" 设置总数为10，默认为5-->
+    <!--(onRate)="" (onCancel)="" 回调函数-->
+    <!--readonly="true" 只读-->
+    <!--disable="禁用"-->
+    <!--iconOnClass iconOffClass 分别是启用和禁用时的样式 -->
+    <!--iconCancelClass 取消按钮的样式, 如果 [cancel]="false"将不会显示取消按钮-->
+    <p-rating [(ngModel)]="val" (onRate)="handleRate($event)" (onCancel)="handleCancel($event)" [cancel]="false"
+      readonly="true" stars="10"></p-rating>
+    <span *ngIf="msg" style="margin-left: 10px">{{msg}}</span>
+  </div>
+
+  <div class="ui-g-12 ui-md-4">
+    <p-rating [ngModel]="val" iconOnClass="pi pi-circle-on" iconOffClass="pi pi-circle-off" iconCancelClass="pi pi-times"></p-rating>
+  </div>
+</div>

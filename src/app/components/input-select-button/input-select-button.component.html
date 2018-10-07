@@ -1,0 +1,22 @@
+<h3>SelectButton Demo</h3>
+<div class="ui-g ui-fluid">
+
+  <!--[options]=""-->
+  <!--optionLabel=""-->
+  <!--multiple="multiple"-->
+  <div class="ui-g-12 ui-md-4">
+    <p-selectButton [(ngModel)]="selectedCity" [options]="cities" optionLabel="name"></p-selectButton>
+    <span *ngIf="selectedCity"> {{selectedCity.name}}</span>
+  </div>
+
+  <div class="ui-g-12 ui-md-4">
+    <p-selectButton [(ngModel)]="selectedCities" [options]="cities" optionLabel="name" multiple="multiple">
+      <ng-template let-item let-index="index">
+        <div style="padding: .5em 1em">{{index}}
+        </div>
+        <span>{{item.name}}</span>
+      </ng-template>
+    </p-selectButton>
+    <p *ngIf="selectedCities"> <span *ngFor="let city of selectedCities"> {{city.name}}</span> </p>
+  </div>
+</div>

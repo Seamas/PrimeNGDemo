@@ -1,0 +1,7 @@
+<h3>triStateCheckbox Demo</h3>
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-md-4">
+    <p-triStateCheckbox [(ngModel)]="val" label="status"></p-triStateCheckbox>
+    <span *ngIf="val !== null">{{val}}</span>
+  </div>
+</div>

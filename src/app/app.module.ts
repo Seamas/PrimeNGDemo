@@ -1,5 +1,6 @@
 import { CityService } from './services/cityservice';
 import { CountryService } from './services/countryservice';
+import { RatingModule, SliderModule, SpinnerModule, SelectButtonModule, ToggleButtonModule, TriStateCheckboxModule } from 'primeng/primeng';
 import { InputSwitchModule, InputTextareaModule, ListboxModule, InputMaskModule, MultiSelectModule, PasswordModule } from 'primeng/primeng';
 import { ChipsModule, ColorPickerModule, DropdownModule, EditorModule, KeyFilterModule, MessageModule } from 'primeng/primeng';
 import { CheckboxModule, InputTextModule, RadioButtonModule, ButtonModule, CalendarModule, AutoCompleteModule } from 'primeng/primeng';
@@ -30,11 +31,18 @@ import { InputMaskComponent } from './components/input-mask/input-mask.component
 import { InputMultiselectComponent } from './components/input-multiselect/input-multiselect.component';
 import { InputPasswordComponent } from './components/input-password/input-password.component';
 import { InputRadiobuttonComponent } from './components/input-radiobutton/input-radiobutton.component';
+import { InputRatingComponent } from './components/input-rating/input-rating.component';
+import { InputSliderComponent } from './components/input-slider/input-slider.component';
+import { InputSpinnerComponent } from './components/input-spinner/input-spinner.component';
+import { InputSelectButtonComponent } from './components/input-select-button/input-select-button.component';
+import { InputToggleButtonComponent } from './components/input-toggle-button/input-toggle-button.component';
+import { InputTristateCheckboxComponent } from './components/input-tristate-checkbox/input-tristate-checkbox.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
     InputCalendarComponent,
     InputAutocompleteComponent,
     InputCheckboxComponent,
@@ -51,7 +59,13 @@ import { InputRadiobuttonComponent } from './components/input-radiobutton/input-
     InputMaskComponent,
     InputMultiselectComponent,
     InputPasswordComponent,
-    InputRadiobuttonComponent
+    InputRadiobuttonComponent,
+    InputRatingComponent,
+    InputSliderComponent,
+    InputSpinnerComponent,
+    InputSelectButtonComponent,
+    InputToggleButtonComponent,
+    InputTristateCheckboxComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +91,13 @@ import { InputRadiobuttonComponent } from './components/input-radiobutton/input-
     ListboxModule,
     InputMaskModule,
     MultiSelectModule,
-    PasswordModule
+    PasswordModule,
+    RatingModule,
+    SliderModule,
+    SpinnerModule,
+    SelectButtonModule,
+    ToggleButtonModule,
+    TriStateCheckboxModule
   ],
   providers: [
     CountryService,

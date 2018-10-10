@@ -1,0 +1,31 @@
+<h3>FileUpload Demo</h3>
+<div class="ui-g ui-fluid">
+  <!--mode="basic" 采用基本模式，首次点击为选择文件，选择文件后再点击为上传文件-->
+  <!--auto="true" 自动上传, 开启后upload和cancel按钮不可见-->
+  <!--(onUpload)="onUpload($event)" 上传完成后的回调函数-->
+  <!--multiple="multiple" 开启多选-->
+  <!--maxFileSize="200000" 限制最大文件大小-->
+  <!--accept="image/*" 接收的文件类型-->
+  <!--url="/api/" 提交的地址-->
+  <!--chooseLabel="" uploadLabel="" cancelLabel="" 自定义选择文字-->
+  <div class="ui-g-12 ui-md-4">
+    <p-fileUpload name="largefiles[]" url="/api/upload/largefile" (onUpload)="onUpload($event)" accept="image/*"
+      maxFileSize="2000000" multiple="multiple" chooseLabel="选择文件" uploadLabel="上传" cancelLabel="取消">
+      <ng-template pTemplate="toolbar">
+        <div>Upload 3 Files</div>
+      </ng-template>
+      <ng-template let-file pTemplate="file">
+        <div>{{file.name}}</div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <div>Custom UI to manage uploaded files</div>
+      </ng-template>
+    </p-fileUpload>
+  </div>
+  <div class="ui-g-12 ui-md-4">
+    <p-fileUpload mode="basic" name="smallfiles[]" url="/api/upload/smallfile" accept="image/*" maxFileSize="2000000"
+      multiple="multiple">
+
+    </p-fileUpload>
+  </div>
+</div>

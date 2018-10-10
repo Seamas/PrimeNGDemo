@@ -1,5 +1,6 @@
 import { CityService } from './services/cityservice';
 import { CountryService } from './services/countryservice';
+import { FileUploadModule } from 'primeng/primeng';
 import { RatingModule, SliderModule, SpinnerModule, SelectButtonModule, ToggleButtonModule, TriStateCheckboxModule } from 'primeng/primeng';
 import { InputSwitchModule, InputTextareaModule, ListboxModule, InputMaskModule, MultiSelectModule, PasswordModule } from 'primeng/primeng';
 import { ChipsModule, ColorPickerModule, DropdownModule, EditorModule, KeyFilterModule, MessageModule } from 'primeng/primeng';
@@ -37,6 +38,7 @@ import { InputSpinnerComponent } from './components/input-spinner/input-spinner.
 import { InputSelectButtonComponent } from './components/input-select-button/input-select-button.component';
 import { InputToggleButtonComponent } from './components/input-toggle-button/input-toggle-button.component';
 import { InputTristateCheckboxComponent } from './components/input-tristate-checkbox/input-tristate-checkbox.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 
 @NgModule({
@@ -65,7 +67,8 @@ import { InputTristateCheckboxComponent } from './components/input-tristate-chec
     InputSpinnerComponent,
     InputSelectButtonComponent,
     InputToggleButtonComponent,
-    InputTristateCheckboxComponent
+    InputTristateCheckboxComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -97,7 +100,8 @@ import { InputTristateCheckboxComponent } from './components/input-tristate-chec
     SpinnerModule,
     SelectButtonModule,
     ToggleButtonModule,
-    TriStateCheckboxModule
+    TriStateCheckboxModule,
+    FileUploadModule
   ],
   providers: [
     CountryService,
